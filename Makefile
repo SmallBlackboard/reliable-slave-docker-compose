@@ -7,4 +7,4 @@ all: test
 start:
 	RELIABLE_MASTER=$(reliable_master_IP):$(reliable_master_port) docker-compose down
 	RELIABLE_MASTER=$(reliable_master_IP):$(reliable_master_port) docker-compose build
-	RELIABLE_MASTER=$(reliable_master_IP):$(reliable_master_port) docker-compose  logs -f
+	RELIABLE_MASTER=$(reliable_master_IP):$(reliable_master_port) docker-compose up -d --remove-orphans
