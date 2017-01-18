@@ -1,0 +1,6 @@
+reliable-macaca-slave:
+  container_name: "reliable-macaca-slave"
+  restart: "always"
+  image: reliable-macaca-slave
+  command: /reliable-macaca-slave/bin/reliable-macaca-slave server -m ${RELIABLE_MASTER} --verbose
+
